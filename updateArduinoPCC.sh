@@ -1,3 +1,4 @@
+#!/bin/bash
 #################
 # Script to add python and files and update arduino code 
 # usage: 
