@@ -7,12 +7,16 @@
 if [[ $1 == "" ]]
 then
     echo "usage:"
-    echo "   updateArduino.sh <string output from calibration>"
+    echo "   updateArduino.sh \"min: { ... } max: { ... }\"" 
     exit
 fi
 
 sudo apt-get install python python-pip
 sudo pip install enum numpy
+tar xf arduino.tar.xz
+sudo chmod u+x arduino-1.6.8/install.sh
+sudo ./arduino-1.6.8/install.sh
+
 git clone git@github.com:doku/Swarmathon-Arduino.git
 cd Swarmathon-Arduino/Swarmathon_Arduino
 echo "In directory: " `pwd`
